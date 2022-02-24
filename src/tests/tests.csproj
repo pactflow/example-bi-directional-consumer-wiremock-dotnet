@@ -26,9 +26,9 @@
     <None Remove="pacts\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\example-bi-directional-consumer-dotnet.core\example-bi-directional-consumer-dotnet.csproj" />
+    <Folder Include="pacts\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="pacts\" />
+    <ProjectReference Include="..\example-bi-directional-consumer-dotnet\example-bi-directional-consumer-dotnet.csproj" />
   </ItemGroup>
 </Project>
