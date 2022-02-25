@@ -1,4 +1,4 @@
-# Why are we using a Makefile? Pactflow has around 30 example consumer and provider projects that show how to use Pact. 
+# Why are we using a Makefile? Pactflow has around 30 example consumer and provider projects that show how to use Pact.
 # We often use them for demos and workshops, and Makefiles allow us to provide a consistent language and platform agnostic interface
 # for each project. You do not need to use Makefiles to use Pact in your own project!
 
@@ -36,7 +36,7 @@ fake_ci:
 
 publish_pacts:
 	@echo "\n========== STAGE: publish pacts ==========\n"
-	@"${PACT_CLI}" publish ${PWD}/tests/pacts --consumer-app-version ${GIT_COMMIT} --tag ${GIT_BRANCH}
+	@"${PACT_CLI}" publish ${PWD}/src/tests/pacts --consumer-app-version ${GIT_COMMIT} --tag ${GIT_BRANCH}
 
 ## =====================
 ## Build/test tasks
@@ -44,7 +44,7 @@ publish_pacts:
 
 test:
 	@echo "\n========== STAGE: test (pact) ==========\n"
-	dotnet test tests
+	dotnet test src/tests
 
 ## =====================
 ## Deploy tasks

@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  PACT_BROKER_BASE_URL: https://testdemo.pactflow.io
+  PACT_BROKER_TOKEN: ${{ secrets.PACTFLOW_TOKEN_FOR_CI_CD_WORKSHOP }}
+  PACT_BROKER_PUBLISH_VERIFICATION_RESULTS: true
+  GIT_COMMIT: ${{ github.sha }}
+  GITHUB_REF: ${{ github.ref }}
+
+jobs:
+  test:
+    name: "Build and Test (dotnet)"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: "6.0.x" # runners already have .Net Framework installed as well
+
+      - name: CI
+        run: GIT_BRANCH=${GITHUB_REF#refs/heads/} make ci
