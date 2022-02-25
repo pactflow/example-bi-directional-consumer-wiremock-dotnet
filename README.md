@@ -1,1 +1,1 @@
-# example-bi-directional-consumer-dotnet
+# Example .NET Pact Consumer
