@@ -7,7 +7,7 @@
       "description": "a request to retrieve a product id that does not exist",
       "request": {
         "method": "GET",
-        "path": "/products/10"
+        "path": "/Products/10"
       },
       "response": {
         "headers": {
@@ -20,7 +20,7 @@
       "description": "a request to retrieve a product with existing id",
       "request": {
         "method": "GET",
-        "path": "/products/27"
+        "path": "/Products/27"
       },
       "response": {
         "body": {
@@ -67,7 +67,7 @@
       "description": "a request to retrieve all products",
       "request": {
         "method": "GET",
-        "path": "/products"
+        "path": "/Products"
       },
       "response": {
         "body": [
@@ -109,6 +109,6 @@
     }
   },
   "provider": {
-    "name": "ExampleProvider"
+    "name": "pactflow-example-bi-directional-provider-dotnet"
   }
 }

@@ -13,9 +13,9 @@ namespace Consumer
         {
             using var client = httpClient == null ? new HttpClient() : httpClient;
 
-            var response = await client.GetAsync(baseUrl + "products");
+            var response = await client.GetAsync(baseUrl + "Products");
             response.EnsureSuccessStatusCode();
-            //return response;
+
             var responseStr = await response.Content.ReadAsStringAsync();
 
             return JsonConvert.DeserializeObject<List<Product>>(responseStr);
@@ -26,7 +26,7 @@ namespace Consumer
         {
             using var client = httpClient == null ? new HttpClient() : httpClient;
 
-            var response = await client.GetAsync(baseUrl + "products/" + productId);
+            var response = await client.GetAsync(baseUrl + "Products/" + productId);
             response.EnsureSuccessStatusCode();
 
             var resp = await response.Content.ReadAsStringAsync();

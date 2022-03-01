@@ -14,7 +14,6 @@ namespace Consumer
             var baseUri = "http://localhost:9000/";
 
             Console.WriteLine("Fetching products");
-            //Console.ReadLine();
             var consumer = new ProductClient();
             var result = await consumer.GetProducts(baseUri);
             Console.WriteLine(JsonConvert.SerializeObject(result));

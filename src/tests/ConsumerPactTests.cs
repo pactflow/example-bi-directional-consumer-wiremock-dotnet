@@ -36,7 +36,7 @@ namespace tests
 
             // TODO set provider name fomr env var for mixnmatch(default to .net example one)
             // you select which specification version you wish to use by calling either V2 or V3
-            IPactV3 pact = Pact.V3("pactflow-example-bi-directional-consumer-dotnet", "ExampleProvider", config);
+            IPactV3 pact = Pact.V3("pactflow-example-bi-directional-consumer-dotnet", "pactflow-example-bi-directional-provider-dotnet", config);
 
             // the pact builder is created in the constructor so it's unique to each test
             this.pact = pact.UsingNativeBackend(port);
@@ -48,7 +48,7 @@ namespace tests
             //Arrange
             pact
                 .UponReceiving("a request to retrieve all products")
-                .WithRequest(HttpMethod.Get, "/products")
+                .WithRequest(HttpMethod.Get, "/Products")
                 .WillRespond()
                 .WithStatus(System.Net.HttpStatusCode.OK)
                 .WithHeader("Content-Type", "application/json; charset=utf-8")
@@ -78,7 +78,7 @@ namespace tests
         {
             pact
                 .UponReceiving("a request to retrieve a product with existing id")
-                .WithRequest(HttpMethod.Get, "/products/27")
+                .WithRequest(HttpMethod.Get, "/Products/27")
                 .WillRespond()
                 .WithStatus(System.Net.HttpStatusCode.OK)
                 .WithHeader("Content-Type", "application/json; charset=utf-8")
@@ -107,7 +107,7 @@ namespace tests
         {
             pact
                 .UponReceiving("a request to retrieve a product id that does not exist")
-                .WithRequest(HttpMethod.Get, "/products/10")
+                .WithRequest(HttpMethod.Get, "/Products/10")
                 .WillRespond()
                 .WithStatus(System.Net.HttpStatusCode.NotFound)
                 .WithHeader("Content-Type", "application/json; charset=utf-8");
