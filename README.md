@@ -2,7 +2,7 @@
 
 ![Build](https://github.com/pactflow/example-consumer/workflows/Build/badge.svg)
 
-This is an example of a Node consumer using Pact to create a consumer driven contract, and sharing it via [Pactflow](https://pactflow.io).
+This is an example of a .NET consumer using Pact to create a consumer driven contract, and sharing it via [Pactflow](https://pactflow.io).
 
 The project uses a Makefile to simulate a very simple build pipeline with two stages - test and deploy.
 
@@ -22,7 +22,7 @@ See the [Pactflow CI/CD Workshop](https://github.com/pactflow/ci-cd-workshop).
 
 _NOTE: if you're running the CI/CD workshop, you can ignore this section. This is an extension to the example that demonstrates a new [feature](https://github.com/pactflow/roadmap/issues/4) in developer preview._
 
-This is an example of a Node consumer using Pact to create a consumer driven contract, and sharing it via [Pactflow](https://pactflow.io).
+This is an example of a .NET consumer using Pact to create a consumer driven contract, and sharing it via [Pactflow](https://pactflow.io).
 
 It implements a "Product" website, to demonstrate the new bi-directional contract capability of Pactflow (previously referred to as Provider driven contracts, or collaborative contracts). See the [Provider](https://github.com/pactflow/example-pactflow-example-provider-dredd) counterpart.
 
@@ -53,7 +53,7 @@ To be able to run some of the commands locally, you will need to export the foll
 * `PACT_PROVIDER=pactflow-example-provider-dredd`: this changes the default provider to the Dredd based provider (https://github.com/pactflow/example-provider-dredd)
 * `PACT_PROVIDER=pactflow-example-provider-postman`: ... Postman (https://github.com/pactflow/example-provider-postman)
 * `PACT_PROVIDER=pactflow-example-provider-restassured`: ... Rest Assured (https://github.com/pactflow/example-provider-restassured)
-* `PACT_PROVIDER=pactflow-example-bi-directional-provider-dotnet`: ... Rest Assured (https://github.com/pactflow/example-provider-restassured)
+* `PACT_PROVIDER=pactflow-example-bi-directional-provider-dotnet`: ... .NET (https://github.com/pactflow/example-bi-directional-consumer-dotnet)
 ### Usage
 
 #### Pact use case
