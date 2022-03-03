@@ -42,7 +42,7 @@ When you run the CI pipeline (see below for doing this), the pipeline should per
 
 * Tools listed at: https://docs.pactflow.io/docs/workshops/ci-cd/set-up-ci/prerequisites/
 * A pactflow.io account with an valid [API token](https://docs.pactflow.io/docs/getting-started/#configuring-your-api-token)
-
+* .NET core 3.1 SDK installed, this is the version of .NET core used for this example
 
 #### Environment variables
 
