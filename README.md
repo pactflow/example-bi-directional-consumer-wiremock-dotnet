@@ -53,7 +53,7 @@ To be able to run some of the commands locally, you will need to export the foll
 * `PACT_PROVIDER=pactflow-example-provider-dredd`: this changes the default provider to the Dredd based provider (https://github.com/pactflow/example-provider-dredd)
 * `PACT_PROVIDER=pactflow-example-provider-postman`: ... Postman (https://github.com/pactflow/example-provider-postman)
 * `PACT_PROVIDER=pactflow-example-provider-restassured`: ... Rest Assured (https://github.com/pactflow/example-provider-restassured)
-* `PACT_PROVIDER=pactflow-example-bi-directional-provider-dotnet`: ... .NET (https://github.com/pactflow/example-bi-directional-consumer-dotnet)
+* `PACT_PROVIDER=pactflow-example-bi-directional-provider-dotnet`: ... .NET (https://github.com/pactflow/example-bi-directional-provider-dotnet)
 ### Usage
 
 #### Pact use case
