@@ -9,8 +9,8 @@ PACTICIPANT := "pactflow-example-bi-directional-consumer-dotnet"
 GITHUB_WEBHOOK_UUID := "58ca703f-4006-496b-8099-a0b9f47897da" # When provider sends verification results, send to github to update status check
 PACT_CLI="docker run --rm -v ${PWD}:${PWD} -e PACT_BROKER_BASE_URL -e PACT_BROKER_TOKEN pactfoundation/pact-cli"
 
-# Only deploy from master
-ifeq ($(GIT_BRANCH),master)
+# Only deploy from main
+ifeq ($(GIT_BRANCH),main)
 	DEPLOY_TARGET=deploy
 else
 	DEPLOY_TARGET=no_deploy
@@ -56,7 +56,7 @@ create_environment:
 deploy: deploy_app record_deployment
 
 no_deploy:
-	@echo "Not deploying as not on master branch"
+	@echo "Not deploying as not on main branch"
 
 can_i_deploy:
 	@echo "\n========== STAGE: can-i-deploy? ==========\n"
