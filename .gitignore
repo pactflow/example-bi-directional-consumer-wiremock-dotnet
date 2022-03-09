@@ -1,6 +1,10 @@
+# pact
+src/tests/pacts/
+
 .vscode/
 bin/
 obj/
+
 # globs
 Makefile.in
 *.userprefs
