@@ -35,7 +35,6 @@ namespace tests
             };
 
 
-            // TODO set provider name fomr env var for mixnmatch(default to .net example one)
             // you select which specification version you wish to use by calling either V2 or V3
             String provider = Environment.GetEnvironmentVariable("PACT_PROVIDER");
             IPactV3 pact = Pact.V3("pactflow-example-bi-directional-consumer-dotnet", provider != null ? provider : "pactflow-example-bi-directional-provider-dotnet" , config);
