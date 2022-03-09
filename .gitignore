@@ -1,5 +1,5 @@
 # pact
-src/tests/pacts/
+tests/pacts/
 
 .vscode/
 bin/

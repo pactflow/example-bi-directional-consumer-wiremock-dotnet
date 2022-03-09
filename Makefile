@@ -36,7 +36,7 @@ fake_ci:
 
 publish_pacts:
 	@echo "\n========== STAGE: publish pacts ==========\n"
-	@"${PACT_CLI}" publish ${PWD}/src/tests/pacts --consumer-app-version ${GIT_COMMIT} --tag ${GIT_BRANCH}
+	@"${PACT_CLI}" publish ${PWD}/tests/pacts --consumer-app-version ${GIT_COMMIT} --tag ${GIT_BRANCH}
 
 ## =====================
 ## Build/test tasks
@@ -44,7 +44,7 @@ publish_pacts:
 
 test:
 	@echo "\n========== STAGE: test (pact) ==========\n"
-	dotnet test src/tests
+	dotnet test
 
 ## =====================
 ## Deploy tasks
