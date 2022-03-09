@@ -34,9 +34,8 @@ namespace tests
                 }
             };
 
-
-            // you select which specification version you wish to use by calling either V2 or V3
             String provider = Environment.GetEnvironmentVariable("PACT_PROVIDER");
+            // you select which specification version you wish to use by calling either V2 or V3
             IPactV3 pact = Pact.V3("pactflow-example-bi-directional-consumer-dotnet", provider != null ? provider : "pactflow-example-bi-directional-provider-dotnet" , config);
 
             // the pact builder is created in the constructor so it's unique to each test
