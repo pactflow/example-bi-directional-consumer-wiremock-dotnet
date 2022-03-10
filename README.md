@@ -69,7 +69,7 @@ You can still try this example locally on Windows using powershell and running c
 1. Make sure you have set all of the environment variables, in powershell they can be set like so.
 
     ```
-     $GIT_BRANCH="main"
+     $env:GIT_BRANCH="main"
     ```
   2. Generate the Pact file for the example by opening the solution and running the tests in visual studio, or using ```dotnet test``` CLI command in the root directory of the project.
 
