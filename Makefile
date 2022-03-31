@@ -2,8 +2,6 @@
 # We often use them for demos and workshops, and Makefiles allow us to provide a consistent language and platform agnostic interface
 # for each project. You do not need to use Makefiles to use Pact in your own project!
 
-# Default to the read only token - the read/write token will be present on Travis CI.
-# It's set as a secure environment variable in the .travis.yml file
 GITHUB_ORG="pactflow"
 PACTICIPANT := "pactflow-example-bi-directional-consumer-dotnet"
 GITHUB_WEBHOOK_UUID := "58ca703f-4006-496b-8099-a0b9f47897da" # When provider sends verification results, send to github to update status check
