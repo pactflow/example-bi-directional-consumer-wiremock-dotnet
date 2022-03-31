@@ -23,8 +23,8 @@ jobs:
             "pactflow-example-provider-dredd",
             "pactflow-example-provider-restassured",
             "pactflow-example-provider-postman",
-            # "pactflow-example-provider",
-            # 'pactflow-example-bi-directional-provider-dotnet'
+            "pactflow-example-provider",
+            'pactflow-example-bi-directional-provider-dotnet'
           ]
     steps:
       - uses: actions/checkout@v2
@@ -37,7 +37,7 @@ jobs:
         env:
           PACT_PROVIDER: ${{ matrix.pact_provider }}
       - name: Publish pacts for ${{ matrix.pact_provider }}
-        run: GIT_BRANCH=${GIT_REF:11} make publish_pacts
+        run: GIT_BRANCH=${GITHUB_REF:11} make publish_pacts
         env:
           PACT_PROVIDER: ${{ matrix.pact_provider }}
         
