@@ -58,7 +58,7 @@ namespace tests
 
             // Save pact
             server
-                .SavePact(Path.Combine("../../../", "pacts"),
+                .SavePact(Path.Combine("..", "..", "..", "pacts"),
                 "get-products.json");
         }
 
@@ -100,7 +100,7 @@ namespace tests
 
             // Save pact
             server
-                .SavePact(Path.Combine("../../../", "pacts"),
+                .SavePact(Path.Combine("..", "..", "..", "pacts"),
                 "get-product-by-id.json");
         }
 
@@ -139,7 +139,7 @@ namespace tests
 
             // Save pact
             server
-                .SavePact(Path.Combine("../../../", "pacts"),
+                .SavePact(Path.Combine("..", "..", "..", "pacts"),
                 "get-product-by-id-not-exist.json");
         }
     }
