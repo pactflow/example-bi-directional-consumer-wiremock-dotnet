@@ -1,5 +1,6 @@
 # pact
 tests/pacts/
+tests/wiremock-mappings/
 
 .vscode/
 bin/
@@ -30,7 +31,6 @@ test-results/
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
