@@ -12,7 +12,7 @@ namespace Consumer
         public async Task<List<Product>> GetProducts(string baseUrl, HttpClient? httpClient = null)
         {
             using var client = httpClient == null ? new HttpClient() : httpClient;
-
+            
             var response = await client.GetAsync(baseUrl + "Products");
             response.EnsureSuccessStatusCode();
 

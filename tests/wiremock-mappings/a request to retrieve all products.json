@@ -1,0 +1,31 @@
+{
+  "Guid": "10687d53-063f-46c3-9f7e-6c63111cd4dd",
+  "Title": "a request to retrieve all products",
+  "Request": {
+    "Path": {
+      "Matchers": [
+        {
+          "Name": "WildcardMatcher",
+          "Pattern": "/Products",
+          "IgnoreCase": false
+        }
+      ]
+    },
+    "Methods": [
+      "GET"
+    ]
+  },
+  "Response": {
+    "StatusCode": 200,
+    "BodyAsJson": [
+      {
+        "id": 27,
+        "name": "burger",
+        "type": "food"
+      }
+    ],
+    "Headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    }
+  }
+}
