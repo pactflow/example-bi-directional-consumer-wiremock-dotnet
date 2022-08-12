@@ -33,7 +33,7 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: test for ${{ matrix.pact_provider }}
-        run: GIT_BRANCH=${GITHUB_REF:11} make test
+        run: mkdir tests/pacts && GIT_BRANCH=${GITHUB_REF:11} make test
         env:
           PACT_PROVIDER: ${{ matrix.pact_provider }}
       - name: Publish pacts for ${{ matrix.pact_provider }}

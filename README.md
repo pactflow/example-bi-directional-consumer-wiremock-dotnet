@@ -1,4 +1,4 @@
-# Example .NET Consumer - Pact-Net
+# Example .NET Consumer - WireMock.Net
 
 <!-- Build Badge -->
 
@@ -8,7 +8,7 @@
 
 [![Can I deploy Status](https://testdemo.pactflow.io/pacticipants/pactflow-example-bi-directional-provider-dotnet/branches/main/latest-version/can-i-deploy/to-environment/production/badge.svg)](https://testdemo.pactflow.io/pacticipants/pactflow-example-bi-directional-provider-dotnet/branches/main/latest-version/can-i-deploy/to-environment/production/badge)
 
-- [Example .NET Consumer - Pact-Net](#example-net-consumer---pact-net)
+- [Example .NET Consumer - WireMock.Net](#example-net-consumer---wiremocknet)
   - [Overview of Example](#overview-of-example)
   - [Overview of Part of Bi-Directional Contract Testing Flow](#overview-of-part-of-bi-directional-contract-testing-flow)
   - [Compatibile with Providers](#compatibile-with-providers)
