@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+using System.Text.Json;
 using Provider.Models;
 
 namespace Consumer
@@ -18,7 +18,7 @@ namespace Consumer
 
             var responseStr = await response.Content.ReadAsStringAsync();
 
-            return JsonConvert.DeserializeObject<List<Product>>(responseStr);
+            return JsonSerializer.Deserialize<List<Product>>(responseStr);
         }
 
 
@@ -31,7 +31,7 @@ namespace Consumer
 
             var resp = await response.Content.ReadAsStringAsync();
 
-            return JsonConvert.DeserializeObject<Product>(resp);
+            return JsonSerializer.Deserialize<Product>(resp);
         }
     }
 }
