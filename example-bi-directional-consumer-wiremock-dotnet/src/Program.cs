@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Text.Json;
 using Provider.Models;
-using Newtonsoft.Json;
 
 namespace Consumer
 {
@@ -16,10 +16,10 @@ namespace Consumer
             Console.WriteLine("Fetching products");
             var consumer = new ProductClient();
             var result = await consumer.GetProducts(baseUri);
-            Console.WriteLine(JsonConvert.SerializeObject(result));
+            Console.WriteLine(JsonSerializer.Serialize<List<Product>>(result));
 
             Product productResult = await consumer.GetProduct(baseUri, 10);
-            Console.WriteLine(JsonConvert.SerializeObject(productResult));
+            Console.WriteLine(JsonSerializer.Serialize(productResult));
         }
 
         static private void WriteoutArgsUsed(string datetimeArg, string baseUriArg)
